@@ -9,10 +9,11 @@
 /* Begin PBXBuildFile section */
 		04584DBD2009FE7B00BB1B90 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 04584DBC2009FE7B00BB1B90 /* AppDelegate.m */; };
 		04584DC02009FE7B00BB1B90 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 04584DBF2009FE7B00BB1B90 /* ViewController.m */; };
-		04584DC32009FE7B00BB1B90 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04584DC12009FE7B00BB1B90 /* Main.storyboard */; };
 		04584DC52009FE7B00BB1B90 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 04584DC42009FE7B00BB1B90 /* Assets.xcassets */; };
 		04584DC82009FE7B00BB1B90 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 04584DC62009FE7B00BB1B90 /* LaunchScreen.storyboard */; };
 		04584DCB2009FE7B00BB1B90 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 04584DCA2009FE7B00BB1B90 /* main.m */; };
+		6563A26F200A66090034DF91 /* SpeakViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6563A26D200A66090034DF91 /* SpeakViewController.m */; };
+		6563A270200A66090034DF91 /* SpeakViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6563A26E200A66090034DF91 /* SpeakViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,11 +22,13 @@
 		04584DBC2009FE7B00BB1B90 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		04584DBE2009FE7B00BB1B90 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
 		04584DBF2009FE7B00BB1B90 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
-		04584DC22009FE7B00BB1B90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		04584DC42009FE7B00BB1B90 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		04584DC72009FE7B00BB1B90 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		04584DC92009FE7B00BB1B90 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		04584DCA2009FE7B00BB1B90 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6563A26C200A66090034DF91 /* SpeakViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SpeakViewController.h; sourceTree = "<group>"; };
+		6563A26D200A66090034DF91 /* SpeakViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SpeakViewController.m; sourceTree = "<group>"; };
+		6563A26E200A66090034DF91 /* SpeakViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SpeakViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,17 +61,27 @@
 		04584DBA2009FE7B00BB1B90 /* AVFundationLearn */ = {
 			isa = PBXGroup;
 			children = (
+				6563A264200A5D660034DF91 /* ViewControllers */,
 				04584DBB2009FE7B00BB1B90 /* AppDelegate.h */,
 				04584DBC2009FE7B00BB1B90 /* AppDelegate.m */,
 				04584DBE2009FE7B00BB1B90 /* ViewController.h */,
 				04584DBF2009FE7B00BB1B90 /* ViewController.m */,
-				04584DC12009FE7B00BB1B90 /* Main.storyboard */,
 				04584DC42009FE7B00BB1B90 /* Assets.xcassets */,
 				04584DC62009FE7B00BB1B90 /* LaunchScreen.storyboard */,
 				04584DC92009FE7B00BB1B90 /* Info.plist */,
 				04584DCA2009FE7B00BB1B90 /* main.m */,
 			);
 			path = AVFundationLearn;
+			sourceTree = "<group>";
+		};
+		6563A264200A5D660034DF91 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				6563A26C200A66090034DF91 /* SpeakViewController.h */,
+				6563A26D200A66090034DF91 /* SpeakViewController.m */,
+				6563A26E200A66090034DF91 /* SpeakViewController.xib */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,8 +143,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				04584DC82009FE7B00BB1B90 /* LaunchScreen.storyboard in Resources */,
+				6563A270200A66090034DF91 /* SpeakViewController.xib in Resources */,
 				04584DC52009FE7B00BB1B90 /* Assets.xcassets in Resources */,
-				04584DC32009FE7B00BB1B90 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,20 +158,13 @@
 				04584DC02009FE7B00BB1B90 /* ViewController.m in Sources */,
 				04584DCB2009FE7B00BB1B90 /* main.m in Sources */,
 				04584DBD2009FE7B00BB1B90 /* AppDelegate.m in Sources */,
+				6563A26F200A66090034DF91 /* SpeakViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		04584DC12009FE7B00BB1B90 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				04584DC22009FE7B00BB1B90 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		04584DC62009FE7B00BB1B90 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -284,7 +290,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Daniel.AVFundationLearn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -298,7 +304,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Daniel.AVFundationLearn;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

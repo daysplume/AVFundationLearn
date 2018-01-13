@@ -7,27 +7,46 @@
 //
 
 #import "ViewController.h"
-#import <AVFoundation/AVFoundation.h>
+#import "SpeakViewController.h"
 
-@interface ViewController ()
-
+@interface ViewController ()<UITableViewDelegate,UITableViewDataSource>
+@property (nonatomic, strong)UITableView *tableView;
+@property (nonatomic, copy)NSArray *titles;
 @end
 
 @implementation ViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // 合成器
-    AVSpeechSynthesizer *synthesizer = [AVSpeechSynthesizer new];
     
-    // 说话方式
-    AVSpeechUtterance *utterpace = [[AVSpeechUtterance alloc] initWithString:@"711"];
+    _tableView = [[UITableView alloc] initWithFrame:CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height)];
+    [_tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:@"cell"];
+    _tableView.delegate = self;
+    _tableView.dataSource = self;
+    [self.view addSubview:_tableView];
     
-    // 按照方式说话
-    [synthesizer speakUtterance:utterpace];
+    _titles = @[@"语言播放",@"拍照"];
+    [_tableView reloadData];
 }
 
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return _titles.count;
+}
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"cell"];
+    cell.textLabel.text = _titles[indexPath.row];
+    return cell;
+}
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    if (indexPath.row == 0) {
+        SpeakViewController *speechSynVC = [SpeakViewController new];
+        speechSynVC.title = _titles[indexPath.row];
+        [self.navigationController
+         pushViewController:speechSynVC
+         animated:true];
+    }
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
